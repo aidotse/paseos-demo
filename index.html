@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Presentation</title>
+    <style>
+        body { margin: 0; }
+        img { width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Display the first image -->
+        <img src="page1.jpg" id="slide" alt="Slide 1">
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 10; // Change depending on nr of slides
+        const slideElement = document.getElementById('slide');
+
+        // Function to change the slide
+        function changeSlide() {
+            currentSlide = (currentSlide % totalSlides) + 1; // Loop from 1 to totalSlides
+            slideElement.src = `page${currentSlide}.jpg`; // Update the image source
+        }
+
+        // Change slide every 5 seconds
+        setInterval(changeSlide, 5000);
+    </script>
+</body>
+</html>
