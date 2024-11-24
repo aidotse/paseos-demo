@@ -17,7 +17,7 @@
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 10; // Change depending on nr of slides
+        const totalSlides = 10; // total nr of slides
         const slideElement = document.getElementById('slide');
 
         // Function to change the slide
@@ -26,7 +26,7 @@
             slideElement.src = `page${currentSlide}.jpg`; // Update the image source
         }
 
-        // Change slide every 5 seconds
+        // Change slide every 5 seconds (milliseconds)
         setInterval(changeSlide, 5000);
     </script>
 </body>
